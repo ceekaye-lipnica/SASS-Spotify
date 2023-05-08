@@ -1,7 +1,7 @@
 // ang purpose ng ampersand - & ay kukunin ang imidiate parent
 
 .header {
-    background: $clr-dark;
+    background: $clr-black;
     position: relative;
     position: fixed;
     width: 100%;
@@ -30,7 +30,7 @@
 
     .branding {
         img {
-            width: 10rem;
+            width: 8rem;
         }
     }
 
@@ -116,7 +116,7 @@
         }
 
         span {
-            width: 3rem;
+            width: 2rem;
             height: .2rem;
             background-color: $clr-light;
             display: block;
@@ -154,22 +154,28 @@
                 span{
                     transform: rotate(90deg);
                     margin-left: 0;
-                    width: 2.5rem;
+                    width: 1rem;
+                    height: .01rem;
                 }
                 li{
                     padding: 0;
 
                     a{
-                        font-size: 2rem;
+                        font-size: 1rem;
                         font-weight: 600;
                     }
+
+                    &.btn {
+                        a{
+                            font-size: 1rem;
+                        }
+                    }
+
+                   
                 }
             }
         }
     }
-
-
-
 
 
 }

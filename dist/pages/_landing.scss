@@ -1,0 +1,138 @@
+
+.banner{
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    background-color: $clr-violet;
+
+    &__wrapper{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 2rem;
+    }
+
+    &__text{
+        h1{
+            color: $clr-light;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        h4{
+            color: $clr-light;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 2rem 0;
+        }
+        p{
+            font-size: .7rem;
+            color: $clr-light;
+            line-height: 1rem;
+            a{
+                text-decoration: underline;
+            color: $clr-light;
+            }
+        }
+
+        }
+
+        &__btn{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem 0;
+
+            #get{
+                display: inline-block;
+                background: #191414;
+                color: $clr-light;
+                font-size: .8rem;
+                font-weight: 600;
+                padding: 1.3rem 3.5rem;
+                border-radius: 5rem;
+                margin-bottom: .8rem;
+
+                &:hover{
+                    transform: scale(1.04);
+                }
+            }
+            #view{
+                display: inline-block;
+                background: $clr-transparent;
+                border: 2px solid $clr-light;
+                color: $clr-light;
+                font-size: .8rem;
+                font-weight: 600;
+                padding: 1.3rem 3.5rem;
+                border-radius: 5rem;
+
+                &:hover{
+                    transform: scale(1.04);
+                }
+            }
+        }
+
+    img{
+        width: 60%;
+        justify-self: center;
+    }
+
+    @include mediaQuery($break-lg){
+        
+        &{
+            padding-top: 2.5rem;
+            padding-bottom: 1rem;
+        }
+
+        &__wrapper{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 1.5rem;
+        }
+
+        &__text{
+            padding-top: 3.2rem;
+            padding-bottom:0rem;
+
+                h1{
+                    font-size: 2.1rem;
+                }
+                h4{
+                    font-size: 1.5rem;
+                    padding-bottom: 0rem;
+                }
+                p{
+                    font-size: .7rem;
+                    color: $clr-light;
+                    line-height: 1rem;
+                }
+            }
+
+        &__btn{
+            flex-direction: row;
+            text-align: center;
+            padding: 2.5rem 0;
+
+            #get{
+                display: inline-block;
+                padding: 1rem 2rem;
+                margin-bottom: 0rem;
+                margin-right: .5rem;
+
+            }
+            #view{
+                display: inline-block;
+                font-size: .8rem;
+                font-weight: 600;
+                padding: 1rem 2rem;
+                border-radius: 5rem;
+            }
+        }
+
+        img{
+            width: 85%;
+            justify-self: right;
+        }
+    
+    
+    }
+
+}
