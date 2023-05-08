@@ -1,0 +1,175 @@
+// ang purpose ng ampersand - & ay kukunin ang imidiate parent
+
+.header {
+    background: $clr-dark;
+    position: relative;
+    position: fixed;
+    width: 100%;
+
+    .blur {
+        height: 100vh;
+        width: 15%;
+        background: rgba(0, 0, 0, .6);
+        position: absolute;
+        left: 100rem;
+        top: 0;
+        z-index: 999;
+        transition: .5s ease;
+
+        &.open {
+            left: 0rem;
+            transition: .5s ease;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .branding {
+        img {
+            width: 10rem;
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        top: 0;
+        right: -100rem;
+        background: $clr-black;
+        height: 100vh;
+        width: 85%;
+        transition: .5s ease;
+
+        &.open {
+            right: 0;
+            transition: .5s ease;
+        }
+
+        img {
+            position: absolute;
+            left: 2rem;
+            bottom: 2rem;
+            width: 10rem;
+
+        }
+
+        ul {
+            span {
+                width: 2.5rem;
+                height: .3rem;
+                background-color: $clr-light;
+                display: block;
+                border-radius: 5rem;
+                margin-left: 2rem;
+            }
+
+            li {
+                padding: 1rem 0 1rem 2rem;
+                cursor: pointer;
+
+                a {
+                    color: $clr-light;
+                    font-size: 3rem;
+                    font-weight: 800;
+                }
+
+                &:hover {
+                    a {
+                        color: $clr-green;
+                    }
+                }
+
+                &.btn {
+                    a {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .toggle__menu {
+        z-index: 999;
+
+        &.open {
+            span {
+                &:first-child {
+                    transform: translate(0, 8px) rotate(45deg);
+                    transition: .5s ease;
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                    transition: .5s ease;
+                }
+
+                &:last-child {
+                    transform: translate(0, -7px) rotate(-45deg);
+                    transition: .5s ease;
+                }
+            }
+
+        }
+
+        span {
+            width: 3rem;
+            height: .2rem;
+            background-color: $clr-light;
+            display: block;
+            border-radius: 5rem;
+
+            &:nth-child(2) {
+                margin: .3rem 0;
+            }
+        }
+    }
+
+    @include mediaQuery($break-lg){
+
+        .toggle__menu{
+            display: none;
+        }
+
+        .blur{
+            display: none;
+        }
+
+        &__nav{
+            position: unset;
+            background: transparent;
+            width: fit-content;
+            height: fit-content;
+  
+            img{
+                display: none;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                span{
+                    transform: rotate(90deg);
+                    margin-left: 0;
+                    width: 2.5rem;
+                }
+                li{
+                    padding: 0;
+
+                    a{
+                        font-size: 2rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+}
