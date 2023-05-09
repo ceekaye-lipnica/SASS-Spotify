@@ -1,3 +1,160 @@
-.footer{
-    background: pink;
+.footer {
+    background: $clr-black;
+
+    .container {
+        padding: 2rem 1rem 2rem 1rem;
+    }
+
+    &-top {
+
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem;
+
+        img {
+            width: 6rem;
+        }
+    }
+
+    &-items {
+        h3 {
+            color: #919496;
+            font-size: .9rem;
+            font-weight: 600;
+        }
+
+        ul {
+            cursor: pointer;
+
+            li {
+                margin: 1.5rem 0;
+
+                a {
+                    font-size: .9rem;
+                    font-weight: 500;
+                    color: $clr-light;
+
+                    &:hover {
+                        color: $clr-green;
+                    }
+                }
+            }
+        }
+    }
+
+    &-icons {
+
+        margin: 4.5rem 0 1rem 0;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            li {
+                a {
+                    color: $clr-light;
+                    background: #222326;
+                    border-radius: 10rem;
+
+                    &:hover {
+                        color: $clr-green;
+                    }
+                }
+
+                &:nth-child(1) {
+                    a {
+                        font-size: 1.7rem;
+                        padding: .5rem .7rem .4rem .7rem;
+                    }
+
+                }
+
+                &:nth-child(2) {
+                    a {
+                        font-size: 1.3rem;
+                        padding: .7rem .7rem .6rem .8rem;
+                    }
+                }
+
+                &:nth-child(3) {
+                    a {
+                        font-size: 1.3rem;
+                        padding: .7rem 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+
+        .left {
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 1.5rem;
+
+                li {
+                    a {
+                        font-size: .6rem;
+                        color: #919496;
+
+                        &:hover {
+                            color: $clr-green;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .right {
+            max-width: 8rem;
+
+            ul {
+                text-align: right;
+
+                li {
+                    margin: .5rem 0 0 0;
+
+                    a {
+                        font-size: .6rem;
+                        color: #919496;
+
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    @include mediaQuery ($break-lg) {
+
+        .container {
+            padding: 5rem 1rem 4rem 1rem;
+        }
+
+        &-top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            img {
+
+                height: 2.5rem;
+                width: 8rem;
+            }
+        }
+
+        &-icons {
+            justify-content: flex-start;
+        }
+    }
 }

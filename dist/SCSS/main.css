@@ -51,7 +51,7 @@ html {
 
 body {
    font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: CircularSp, spotify-circular, Helvetica, Arial, sans-serif;
 }
 
 .container {
@@ -383,12 +383,117 @@ body {
     min-height: 15rem;
   }
   .banner-cards .cards .bottom {
-    min-height: 17rem;
+    min-height: 20rem;
   }
 }
 
 .footer {
-  background: pink;
+  background: #000000;
+}
+.footer .container {
+  padding: 2rem 1rem 2rem 1rem;
+}
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+.footer-top img {
+  width: 6rem;
+}
+.footer-items h3 {
+  color: #919496;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.footer-items ul {
+  cursor: pointer;
+}
+.footer-items ul li {
+  margin: 1.5rem 0;
+}
+.footer-items ul li a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+}
+.footer-items ul li a:hover {
+  color: #1acf5e;
+}
+.footer-icons {
+  margin: 4.5rem 0 1rem 0;
+}
+.footer-icons ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-icons ul li a {
+  color: hsl(0, 0%, 100%);
+  background: #222326;
+  border-radius: 10rem;
+}
+.footer-icons ul li a:hover {
+  color: #1acf5e;
+}
+.footer-icons ul li:nth-child(1) a {
+  font-size: 1.7rem;
+  padding: 0.5rem 0.7rem 0.4rem 0.7rem;
+}
+.footer-icons ul li:nth-child(2) a {
+  font-size: 1.3rem;
+  padding: 0.7rem 0.7rem 0.6rem 0.8rem;
+}
+.footer-icons ul li:nth-child(3) a {
+  font-size: 1.3rem;
+  padding: 0.7rem 1rem;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.footer-bottom .left ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+.footer-bottom .left ul li a {
+  font-size: 0.6rem;
+  color: #919496;
+}
+.footer-bottom .left ul li a:hover {
+  color: #1acf5e;
+}
+.footer-bottom .right {
+  max-width: 8rem;
+}
+.footer-bottom .right ul {
+  text-align: right;
+}
+.footer-bottom .right ul li {
+  margin: 0.5rem 0 0 0;
+}
+.footer-bottom .right ul li a {
+  font-size: 0.6rem;
+  color: #919496;
+}
+@media screen and (min-width: 1080px) {
+  .footer .container {
+    padding: 5rem 1rem 4rem 1rem;
+  }
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-top img {
+    height: 2.5rem;
+    width: 8rem;
+  }
+  .footer-icons {
+    justify-content: flex-start;
+  }
 }
 
 .header {
