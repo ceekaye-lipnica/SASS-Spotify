@@ -16,3 +16,34 @@ $break-sm: 500px;
 $break-md: 768px;
 $break-lg: 1080px;
 $break-xl: 1920px;
+
+.btn{
+    display: inline-block;
+    padding: .8rem 1rem;
+    border-radius: 5rem;
+}
+
+.btn.black{
+    font-size: .8rem;
+    font-weight: 600;
+    color: $clr-light;
+    background: $clr-black;
+    border: 1px solid black;
+    margin-bottom: .5rem;
+}
+
+.btn.black:hover{
+   transform: scale(1.04);
+}
+
+.btn.clear{
+    font-size: .8rem;
+    font-weight: 600;
+    color: $clr-light;
+    background: $clr-transparent;
+    border: 2px solid $clr-light;
+}
+
+.btn.clear:hover{
+    transform: scale(1.04);
+}

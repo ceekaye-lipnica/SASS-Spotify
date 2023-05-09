@@ -1,124 +1,130 @@
-
-.banner{
+.banner {
     padding-top: 5rem;
     padding-bottom: 3rem;
     background-color: $clr-violet;
 
-    &__wrapper{
+    &__wrapper {
         display: grid;
         grid-template-columns: auto;
         grid-gap: 2rem;
     }
 
-    &__text{
-        h1{
+    &__text {
+        h1 {
             color: $clr-light;
             font-size: 1.5rem;
             font-weight: 800;
         }
-        h4{
+
+        h4 {
             color: $clr-light;
             font-size: 1.2rem;
             font-weight: 500;
             padding: 2rem 0;
         }
-        p{
+
+        p {
             font-size: .7rem;
             color: $clr-light;
             line-height: 1rem;
-            a{
+
+            a {
                 text-decoration: underline;
+                color: $clr-light;
+            }
+        }
+
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0;
+
+        #get {
+            display: inline-block;
+            background: #191414;
             color: $clr-light;
+            font-size: .8rem;
+            font-weight: 600;
+            padding: 1.3rem 3.5rem;
+            border-radius: 5rem;
+            margin-bottom: .8rem;
+
+            &:hover {
+                transform: scale(1.04);
             }
         }
 
-        }
+        #view {
+            display: inline-block;
+            background: $clr-transparent;
+            border: 2px solid $clr-light;
+            color: $clr-light;
+            font-size: .8rem;
+            font-weight: 600;
+            padding: 1.3rem 3.5rem;
+            border-radius: 5rem;
 
-        &__btn{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            padding: 2rem 0;
-
-            #get{
-                display: inline-block;
-                background: #191414;
-                color: $clr-light;
-                font-size: .8rem;
-                font-weight: 600;
-                padding: 1.3rem 3.5rem;
-                border-radius: 5rem;
-                margin-bottom: .8rem;
-
-                &:hover{
-                    transform: scale(1.04);
-                }
-            }
-            #view{
-                display: inline-block;
-                background: $clr-transparent;
-                border: 2px solid $clr-light;
-                color: $clr-light;
-                font-size: .8rem;
-                font-weight: 600;
-                padding: 1.3rem 3.5rem;
-                border-radius: 5rem;
-
-                &:hover{
-                    transform: scale(1.04);
-                }
+            &:hover {
+                transform: scale(1.04);
             }
         }
+    }
 
-    img{
+    img {
         width: 60%;
         justify-self: center;
     }
 
-    @include mediaQuery($break-lg){
-        
-        &{
+    @include mediaQuery($break-lg) {
+
+        & {
             padding-top: 2.5rem;
             padding-bottom: 1rem;
         }
 
-        &__wrapper{
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 1.5rem;
+        &__wrapper {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 1.5rem;
         }
 
-        &__text{
+        &__text {
             padding-top: 3.2rem;
-            padding-bottom:0rem;
+            padding-bottom: 0rem;
 
-                h1{
-                    font-size: 2.1rem;
-                }
-                h4{
-                    font-size: 1.5rem;
-                    padding-bottom: 0rem;
-                }
-                p{
-                    font-size: .7rem;
-                    color: $clr-light;
-                    line-height: 1rem;
-                }
+            h1 {
+                font-size: 2.1rem;
             }
 
-        &__btn{
+            h4 {
+                font-size: 1.5rem;
+                padding-bottom: 0rem;
+            }
+
+            p {
+                font-size: .7rem;
+                color: $clr-light;
+                line-height: 1rem;
+            }
+        }
+
+        &__btn {
             flex-direction: row;
             text-align: center;
             padding: 2.5rem 0;
 
-            #get{
+            #get {
                 display: inline-block;
                 padding: 1rem 2rem;
                 margin-bottom: 0rem;
                 margin-right: .5rem;
 
             }
-            #view{
+
+            #view {
                 display: inline-block;
                 font-size: .8rem;
                 font-weight: 600;
@@ -127,12 +133,292 @@
             }
         }
 
-        img{
+        img {
             width: 85%;
             justify-self: right;
         }
-    
-    
+
+
     }
 
+}
+
+.banner-premium {
+    .container {
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin: 1.3rem 0 1.5rem 0;
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 3rem;
+
+        img {
+            width: 6rem;
+            height: 6rem;
+        }
+
+        .items-text {
+            display: inline-block;
+            width: 100%;
+            margin: 1rem 0;
+            line-height: 2;
+
+            h4 {
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+
+        }
+    }
+
+    @include mediaQuery($break-lg) {
+
+        & {
+            .container {
+                padding: 3rem 0 3rem 0;
+
+                h2 {
+                    font-size: 2.5rem;
+                    font-weight: 800;
+                    text-align: center;
+                    margin: 1.3rem 0 1.5rem 0;
+                }
+            }
+        }
+
+
+        &__wrapper {
+            @include grid(4, 2rem);
+            grid-gap: 0rem;
+            margin-top: 5rem;
+
+        }
+
+        &__items {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 9rem;
+                height: 9rem;
+            }
+
+            .items-text {
+                display: inline-block;
+                width: 100%;
+                margin: 1rem 0;
+                line-height: 2;
+
+                h4 {
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+.banner-cards {
+    background: #EFEFEF;
+
+    .container{
+        padding: 1.2rem;
+    }
+
+    &__wrapper {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
+    .cards-title {
+        h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin: 1rem 0 1rem 0;
+
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+
+    .cards-icons {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 3rem;
+
+        p {
+            text-decoration: underline;
+            font-size: 1rem;
+        }
+
+        ul {
+            display: flex;
+            gap: .3rem;
+
+            li {
+                img {
+                    width: 2.5rem;
+                    height: 1rem;
+                }
+
+                &:nth-child(2) {
+                    width: 1.2rem;
+                    height: .8rem;
+                    margin: 0 1.5rem 0 -.2rem;
+                }
+
+                &:nth-child(3) {
+                    width: 1.2rem;
+                    height: .8rem;
+                    margin: 0 .8rem 0 0;
+                }
+
+                &:last-child {
+                    margin: 0 .4rem 0 -.9rem;
+                }
+
+            }
+        }
+    }
+
+    .cards {
+        margin-bottom: 1rem;
+        background: $clr-light ;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px;
+
+        .top {
+            border-bottom: 1px solid $clr-black;
+
+            h5 {
+                font-size: .8rem;
+                font-weight: 800;
+                color: $clr-light;
+                background-color: #0D72EA;
+                border-radius: 5px;
+                width: fit-content;
+                padding: .4rem;
+                margin-bottom: .6rem;
+            }
+
+            h4 {
+                font-size: .8rem;
+                font-weight: 800;
+                color: #0D72EA;
+                border: 1px solid #0D72EA;
+                border-radius: 3px;
+                width: fit-content;
+                padding: .3rem;
+                margin-bottom: .5rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: .9rem;
+                padding: .3rem 0;
+
+                &:last-child {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+
+        }
+
+        .bottom {
+
+
+            ul {
+                padding: 1.5rem 0 1.5rem 0;
+
+                li {
+                    display: flex;
+                    gap: 1rem;
+                    padding: .5rem 0 .5rem 0;
+                }
+            }
+        }
+
+        .btn-bottom {
+            .btn.black {
+                padding: 1rem .8rem;
+            }
+
+
+            a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .underline {
+            font-size: .7rem;
+            font-weight: 100;
+            line-height: 1rem;
+            color: #5F5A55;
+            text-decoration: underline;
+        }
+
+        .terms {
+            color: #5F5A55;
+            font-size: .7rem;
+            font-weight: 100;
+            line-height: 1rem;
+
+            a {
+                color: #5F5A55;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @include mediaQuery ($break-lg) {
+
+        .cards-title {
+            h2 {
+                font-size: 2.5rem;
+                text-align: center;
+                margin: 1rem 0 .5rem 0;
+            }
+
+            p {
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        .cards-contents {
+            @include grid(5, 1rem)
+        }
+
+        .cards {
+            position: relative;
+
+            .top {
+                min-height: 15rem;
+            }
+
+            .bottom {
+                min-height: 17rem;
+            }
+        }
+    }
 }
