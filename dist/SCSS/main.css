@@ -379,15 +379,16 @@ body {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1rem;
   }
-  .banner-cards .cards {
-    position: relative;
-  }
   .banner-cards .cards .top {
     min-height: 15rem;
   }
   .banner-cards .cards .bottom {
     min-height: 17rem;
   }
+}
+
+.footer {
+  background: pink;
 }
 
 .header {
