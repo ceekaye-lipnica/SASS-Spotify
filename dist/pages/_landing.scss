@@ -3,6 +3,8 @@
     padding-bottom: 3rem;
     background-color: $clr-violet;
 
+    
+
     &__wrapper {
         display: grid;
         grid-template-columns: auto;
@@ -20,7 +22,7 @@
             color: $clr-light;
             font-size: 1.2rem;
             font-weight: 500;
-            padding: 2rem 0;
+            padding: 2rem 0 0 0;
         }
 
         p {
@@ -40,108 +42,115 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 2rem 0;
-
-        #get {
-            display: inline-block;
-            background: #191414;
-            color: $clr-light;
-            font-size: .8rem;
-            font-weight: 600;
-            padding: 1.3rem 3.5rem;
-            border-radius: 5rem;
-            margin-bottom: .8rem;
-
-            &:hover {
-                transform: scale(1.04);
-            }
+        margin: 3rem 0 2rem 0;
+        gap: .5rem
         }
-
-        #view {
-            display: inline-block;
-            background: $clr-transparent;
-            border: 2px solid $clr-light;
-            color: $clr-light;
-            font-size: .8rem;
-            font-weight: 600;
-            padding: 1.3rem 3.5rem;
-            border-radius: 5rem;
-
-            &:hover {
-                transform: scale(1.04);
-            }
-        }
-    }
 
     img {
-        width: 60%;
+        @include imgFit(19rem, 19rem);
         justify-self: center;
     }
+    
+    @include mediaQuery($break-md) {
+        &{
+            padding-top: 6rem;
+        }
 
-    @include mediaQuery($break-lg) {
+        &__wrapper{
+            margin-left: .5rem;
+        }
+
+        &__text{
+            h1{
+                font-size: 2.2rem;
+            }
+
+            h4{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: .7rem;
+            }
+        }
+
+        &__btn{
+            flex-direction: row;
+            align-items: center;
+            gap: .5rem;
+
+            .btn{
+                padding: 1rem 2rem;
+                font-weight: 600;
+            }
+        }
+
+        
+    }
+
+    @include mediaQuery(995px){
+
+        &__text{
+            h4{
+                padding: 1.5rem 0;
+            }
+            p{
+                max-width: 39rem;
+                flex-wrap: wrap;
+            }
+        }
+
+        &__btn{
+            padding: 1rem 0 2rem 0;
+        }
+
+
+        img{
+            @include imgFit(23rem, 25rem)
+        }
+
+    }
+
+    @include mediaQuery (1200px){
 
         & {
-            padding-top: 2.5rem;
+            padding-top: 5rem;
             padding-bottom: 1rem;
         }
+        
 
-        &__wrapper {
+        &__wrapper{
             display: grid;
             grid-template-columns: auto auto;
-            grid-gap: 1.5rem;
+            grid-gap: 1.6rem;
         }
 
-        &__text {
-            padding-top: 3.2rem;
-            padding-bottom: 0rem;
+        .container{
+            padding: 4rem 1.5rem 1.5rem .5rem;
+        }
 
-            h1 {
-                font-size: 2.1rem;
-            }
+        &__text{
+            padding-top: 0rem;
 
-            h4 {
+            h4{
                 font-size: 1.5rem;
-                padding-bottom: 0rem;
-            }
-
-            p {
-                font-size: .7rem;
-                color: $clr-light;
-                line-height: 1rem;
+                line-height: 1.5;
+                padding: 2rem 0 0 0;
             }
         }
 
-        &__btn {
-            flex-direction: row;
-            text-align: center;
-            padding: 2.5rem 0;
-
-            #get {
-                display: inline-block;
-                padding: 1rem 2rem;
-                margin-bottom: 0rem;
-                margin-right: .5rem;
-
-            }
-
-            #view {
-                display: inline-block;
-                font-size: .8rem;
-                font-weight: 600;
-                padding: 1rem 2rem;
-                border-radius: 5rem;
-            }
+        &__btn{
+            padding: 0rem;
+            margin-top: 2rem;
         }
 
-        img {
-            width: 85%;
-            justify-self: right;
+        img{
+            @include imgFit(24rem, 25rem)
         }
-
-
     }
 
 }
+
+
 
 .banner-premium {
     .container {
@@ -177,14 +186,49 @@
         }
     }
 
+    @include mediaQuery($break-md){
+
+        .container{
+            padding: 3rem 1.5rem 9rem 1.5rem;
+
+            h2 {
+                font-size: 2.3rem;
+                font-weight: 800;
+                text-align: center;
+                margin: 1.3rem 0 1.5rem 0;
+            }
+        }
+
+
+        &__wrapper{
+            @include grid(2, 1.5rem);
+        }
+
+        &__items{
+            margin-top: 3rem;
+            margin-bottom: 0rem;
+
+            img{
+                @include imgFit(6rem, 6rem);
+            }
+
+            .items-text{
+                h4{
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+    }
+
     @include mediaQuery($break-lg) {
 
         & {
             .container {
-                padding: 3rem 0 3rem 0;
+                padding: 3rem 0 5rem 0;
 
                 h2 {
-                    font-size: 2.5rem;
+                    font-size: 2.3rem;
                     font-weight: 800;
                     text-align: center;
                     margin: 1.3rem 0 1.5rem 0;
@@ -196,8 +240,6 @@
         &__wrapper {
             @include grid(4, 2rem);
             grid-gap: 0rem;
-            margin-top: 5rem;
-
         }
 
         &__items {
@@ -231,7 +273,7 @@
 .banner-cards {
     background: #EFEFEF;
 
-    .container{
+    .container-cards{
         padding: 1.2rem;
     }
 
@@ -260,6 +302,7 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 3rem;
+
 
         p {
             text-decoration: underline;
@@ -294,13 +337,71 @@
 
             }
         }
+
+        .hoverstate{
+            position: relative;
+            
+            ul{
+                position:absolute;
+                background: $clr-light;
+                padding: .5rem;
+                right: -5rem;
+                top: 1.5rem;
+                border-radius: .5rem;
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px;
+                display: none;
+
+                li{
+                    &:last-child{
+                        img{
+                            width: 1.3rem;
+                            margin-left: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            &:hover{
+                ul{
+                    display: unset;
+                @include grid(4, 0rem);
+                }
+                
+            }
+        }
+
+
+
+
+
+    }
+
+    .cards-contents{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .cards {
+        max-width: 28rem; 
         margin-bottom: 1rem;
         background: $clr-light ;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px;
+
+        &:first-child{
+
+            .container{
+                padding-bottom: .3rem;
+            }
+
+
+            p{
+                span{
+                    opacity: 0%;
+                }
+            }
+        }
 
         .top {
             border-bottom: 1px solid $clr-black;
@@ -358,6 +459,10 @@
         }
 
         .btn-bottom {
+
+            margin-bottom: 1rem;
+
+
             .btn.black {
                 padding: 1rem .8rem;
             }
@@ -378,6 +483,7 @@
         }
 
         .terms {
+            max-width: 28rem;
             color: #5F5A55;
             font-size: .7rem;
             font-weight: 100;
@@ -391,6 +497,10 @@
     }
 
     @include mediaQuery ($break-lg) {
+
+        .container-cards{
+            padding: 3.5rem 1.2rem 7.5rem 1.2rem;
+        }
 
         .cards-title {
             h2 {
@@ -406,12 +516,16 @@
         }
 
         .cards-contents {
-            @include grid(5, 1rem)
+            @include grid(5, 1rem);
+            align-items: start;
+
         }
 
         .cards {
+            height: 100%;
+
             .top {
-                min-height: 15rem;
+                min-height: 16rem;
             }
 
             .bottom {

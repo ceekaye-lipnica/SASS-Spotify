@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/1c76e7983b.js" crossorigin="anonymous"></script>
     
 </head>
+
 <body>
     <header class="header">
         <div class="blur"></div>
@@ -41,32 +42,25 @@
         </div>
     </header>
 
-    <!-- <section class="links">
-        <div class="container">
-            <div class="links__wrapper">
-
-            </div>
-        </div>
-    </section> -->
-
     <div class="banner">
         <div class="container">
             <div class="banner__wrapper">
                 <div class="banner__text">
 
-                    <h1>Get 3 months of Premium for ₱149 with e-wallets and mobile.</h1>
-                    <h4>Just ₱149/month after. Offer ends 16/05/2023. Cancel anytime.</h4>
+                    <h1>Ends soon: 3 months of Premium for ₱149 with e-wallets and mobile</h1>
+                    <h4>Don't miss ad-free music listening, offline playback, and more. Cancel anytime.</h4>
+                    <h4>Offer ends in 6 days</h4>
 
                     <div class="banner__btn">
                         <a href="" id="get" class="btn black">GET STARTED</a>
                         <a href="" id="view" class="btn clear">VIEW PLAN</a>
                     </div>
 
-                    <p>Individual plan only. ₱149/month after. <a href=""> Terms and conditions apply.</a> Open only to users who haven’t already tried Premium. Offer ends 16/05/2023.</p>
+                    <p>Individual plan only. ₱149/month after. <a href=""> Terms and conditions apply.</a>  Offer not available for users who have already tried Premium. Offer ends 16/05/2023. </p>
 
                 </div>
 
-                <img src="./dist/img/premium.jpg" alt="">
+                <img src="./dist/img/pinkPremium.png" alt="">
             </div>
         </div>
     </div>
@@ -110,11 +104,13 @@
     </div>
 
     <div class="banner-cards">
-        <div class="container">
+        <div class="container-cards">
             <div class="banner-cards__wrapper">
+
                 <div class="cards-title">
                     <h2>Pick your Premium</h2>
                     <p>Listen without limits on your phone, speaker, and other devices.</p>
+
                     <div class="cards-icons">
                         <ul>
                             <li><img src="./dist/img/gcash.svg" alt=""></li>
@@ -123,7 +119,24 @@
                             <li><img src="./dist/img/tnt.svg" alt=""></li>
                             <li><img src="./dist/img/visa.svg" alt=""></li>
                         </ul>
-                        <p>+9 more</p>
+
+                        <div class="hoverstate">
+                            <p> +9 more </p>
+                            <ul>
+                                <li><img src="./dist/img/mastercard.svg" alt=""></li>
+                                <li><img src="./dist/img/amex.svg" alt=""></li>
+                                <li><img src="./dist/img/jcb.svg" alt=""></li>
+                                <li><img src="./dist/img/unionpay.svg" alt=""></li>
+                                <li><img src="./dist/img/paypal.png" alt=""></li>
+                                <li><img src="./dist/img/bdo.svg" alt=""></li>
+                                <li><img src="./dist/img/bpi.svg" alt=""></li>
+                                <li><img src="./dist/img/bayadcenter.svg" alt=""></li>
+                                <li><img src="./dist/img/sun logo.svg" alt=""></li>
+                            </ul>
+
+                        </div>
+                        
+                        <!-- <p>+9 more</p> -->
                     </div>
                 </div>
 
@@ -133,6 +146,7 @@
                     <div class="cards">
                         <div class="container">
                             <div class="top">
+                                <h5>3 months for ₱149 with e-wallets and mobile</h5>
                                 <h4>One-time payment</h4>
                                 <h3>Mini</h3>
                                 <p>From ₱7/day</p>
@@ -160,7 +174,7 @@
                                     <a href="" class="btn black">GET STARTED</a>
                                 </div>
 
-                                <a href="" class=" terms"> Terms and conditions apply.</a>
+                                <p class="terms"><a href=""> Terms and conditions apply.</a> <span>  Offer not available for users who have already tried Premium. Offer ends 16/05/2023. </span> </p>
                             
                         </div>
                     </div>
@@ -329,24 +343,23 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <section class="links">
         <div class="container">
-            <div class="footer__wrapper">
+            <div class="links__wrapper">
+                <img src="./dist/img/spotify-white.png" alt="">
 
-                <div class="footer-top">
-                    <img src="./dist/img/spotify-white.png" alt="">
+                <div class="links__drop">
 
-                    <div class="footer-items">
-                        <h3>COMPANY</h3>
+                    <div class="links__drop__item">
+                        <h4> <span>COMPANY</span> <i class="fa-solid fa-chevron-down"></i> </h4>
                         <ul>
                             <li><a href="">About</a></li>
                             <li><a href="">Jobs</a></li>
                             <li><a href="">For the Record</a></li>
                         </ul>
-
                     </div>
-                    <div class="footer-items">
-                        <h3>COMMUNITIES</h3>
+                    <div class="links__drop__item">
+                        <h4> <span>COMMUNITIES</span> <i class="fa-solid fa-chevron-down"></i> </h4>
                         <ul>
                             <li><a href="">For Artists</a></li>
                             <li><a href="">Developers</a></li>
@@ -356,8 +369,8 @@
                             <li><a href="">Spotify for Work</a></li>
                         </ul>
                     </div>
-                    <div class="footer-items">
-                        <h3>USEFUL LINKS</h3>
+                    <div class="links__drop__item">
+                        <h4> <span>USEFUL LINKS</span> <i class="fa-solid fa-chevron-down"></i> </h4>
                         <ul>
                             <li><a href="">Support</a></li>
                             <li><a href="">Web Player</a></li>
@@ -365,15 +378,25 @@
                         </ul>
                     </div>
 
-                    <div class="footer-icons">
-                        <ul>
-                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-                        </ul>
-                    </div>
+                </div>
+
+                <div class="links__social">
+                    <ul>
+                        <li><a href=""> <i class="fa-brands fa-instagram"></i> </a></li>
+                        <li><a href=""> <i class="fa-brands fa-twitter"></i> </a></li>
+                        <li><a href=""> <i class="fa-brands fa-facebook-f"></i> </a></li>
+                    </ul>
 
                 </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
 
                 <div class="footer-bottom">
 
@@ -389,7 +412,7 @@
 
                     <div class="right">
                         <ul>
-                            <li><a href=""><i class="fa-solid fa-earth-europe"></i> Philippines (English)</a></li>
+                            <li><a href=""><i class="fa-solid fa-earth-europe"></i> <p>Philippines (English)</p> </a></li>
                             <li> <a href="">© 2023 Spotify AB</a></li>
                         </ul>
                     </div>
@@ -399,7 +422,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="./dist/js/script.js"></script>
 

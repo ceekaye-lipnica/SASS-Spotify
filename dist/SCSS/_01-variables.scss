@@ -14,7 +14,7 @@ $clr-violet: #B02897;
 
 $break-sm: 500px;
 $break-md: 768px;
-$break-lg: 1080px;
+$break-lg: 1200px;
 $break-xl: 1920px;
 
 .btn{
@@ -28,9 +28,8 @@ $break-xl: 1920px;
     font-weight: 600;
     color: $clr-light;
     background: $clr-black;
-    border: 1px solid black;
-    margin-bottom: .5rem;
-}
+   border: 2px solid black;
+} 
 
 .btn.black:hover{
    transform: scale(1.04);
